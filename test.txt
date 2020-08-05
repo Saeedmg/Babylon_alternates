@@ -1,0 +1,12 @@
+header
+word1 secondpart1
+definition1
+
+word2 secondpart2
+definition2
+
+word3 secondpart3 thirdpart3
+definition3
+
+word4 secondpart4
+001444
