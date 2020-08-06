@@ -6,7 +6,7 @@ import pandas as pd
 
 def add_alternate(file, header='header'):
 	df = pd.read_table(file, skip_blank_lines=False)
-	n = df[header].loc[2]
+	# n = df[header].loc[2] # this would be the third line in your file. it should return an empty value
 	evens = df[header].iloc[::3]    
 	evens[:] = evens + '|' + evens.str.replace('\s+', '|')
 	df.columns = df.columns.str.strip()
@@ -20,5 +20,8 @@ def add_alternate(file, header='header'):
 	f.close()
 
 if __name__ == '__main__':
-	add_alternate('test.txt') # put your source file here
+	add_alternate('test.txt') # put your source file here (this could be .gls or .txt file)
+                                  # the first line in your file must have a header (default='header')
+                                  # the second line in your file must be the first enrty of your dictionary.
+                                  # check out the example file (test.txt) in the directory .
 
