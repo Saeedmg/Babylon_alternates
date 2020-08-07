@@ -22,6 +22,6 @@ def add_alternate(file, header='header'):
 if __name__ == '__main__':
 	add_alternate('test.txt') # put your source file here (this could be .gls or .txt file)
                                   # the first line in your file must have a header (default='header')
-                                  # the second line in your file must be the first enrty of your dictionary.
+                                  # the second line in your file must be the first entry of your dictionary.
                                   # check out the example file (test.txt) in the directory .
 
