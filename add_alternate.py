@@ -10,12 +10,12 @@ def add_alternate(file, header='header'):
 	evens = df[header].iloc[::3]    
 	evens[:] = evens + '|' + evens.str.replace('\s+', '|')
 	df.columns = df.columns.str.strip()
-	df.to_csv('result.txt', index=False, header=False, sep='\t')
-	f = open('result.txt','r')
+	df.to_csv('result.txt', encoding='utf-8', index=False, header=False, sep='\t')
+	f = open('result.txt','r', encoding='utf-8')
 	filedata = f.read()
 	f.close()
 	newdata = filedata.replace("\"\"",'')
-	f = open('result.txt','w')
+	f = open('result.txt','w', encoding='utf-8')
 	f.write(newdata)
 	f.close()
 
